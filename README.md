@@ -1,18 +1,12 @@
 ## Seven Advantages to Cloud
 
-## 1. Cost effective - Pay on demand
-
-## 2. Global - Launch anywhere in the world
-
-## 3. Secure - Cloud servvices can be secure by default
-
-## 4. Reliable - Data backup, disaster recovery, data replication, fault tolerance
-
-## 5. Scalable - Increae or decrease resources and services based on demand
-
-## 6. Elastic - Automate scaling during spikes and drop in demand
-
-## 7. Current - The underlying hardware and managed software is patched, upgraded and replaced by the cloud provider without interruption to you
+- 1. Cost effective - Pay on demand
+- 2. Global - Launch anywhere in the world
+- 3. Secure - Cloud servvices can be secure by default
+- 4. Reliable - Data backup, disaster recovery, data replication, fault tolerance
+- 5. Scalable - Increae or decrease resources and services based on demand
+- 6. Elastic - Automate scaling during spikes and drop in demand
+- 7. Current - The underlying hardware and managed software is patched, upgraded and replaced by the cloud provider without interruption to you
 
 ## AWS Global Infrastructure
 
