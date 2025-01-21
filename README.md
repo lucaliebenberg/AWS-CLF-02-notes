@@ -250,3 +250,69 @@ AWS Outposts comes in 3 form factors: 42U, 1U and 2U
 - **42U:** AWS delivers it to your preferred physical site fully assembled and ready to be rolled into final position. It is installed by AWS and the rack needs to be simply plugged into power and network.
 - **1U:** suitable for 19-inch wide 24-inch deep cabinets AWS Graviton2 (up to 64 vCPUs) 128 GiB memory 4 TB of local NVMe storage
 - **2U:** suitable for 19-inch wide 36-inch deep cabinets, Intel processor (up to 128 vCPUs) 256 GiB memory 8TB of local NVMe storage
+
+## Cloud Architecture
+
+**What is a Solutions Architect?** <br/>
+A role in a technical organisation that architects a technical solution using multiple systems via researching, documentation, experimentation.
+
+**What is a Cloud Architect?** <br/>
+A solutions architect that is focused soley on architecting technical solutions using cloud services <br/>
+A cloud architect needs to understand the following terms and factor them into their designed architecture based on the business requirements:
+
+1. **Availability** - your ability to ensure a service remains available (HA)
+2. **Scalability** - your ability to grow rapidly or unimpeded
+3. **Elasticity** - your ability to shrink and grow to meet the demand
+4. **Fault Tolerance** - your ability to prevent a failure
+5. **Disaster Recovery** - your ability to recover from a failure (Highly Durable)
+
+A Solution Architect needs to always consider the following business factors: <br/>
+
+- (Security) How secure is this solution?
+- (Cost) How much is this going to cost?
+
+### High Scalability
+
+Your ability to **increase your capacity** based on the increasing demand of traffic, memory and computing power
+
+1. **Vertical Scaling** - scaling up (Upgrade to a bigger server)
+2. **Horizontal Scaling** - scaling out (Add more servers of the same size)
+
+### High Availability
+
+Your ability for your service to **remain available** by ensuring there is \*no single point of failure and/or ensure a certain level of performance
+<br/>
+
+**Service usage:** <br/>
+
+- Elastic Load Balancer: A load balancer allows you to evenly distribute traffic to multiple servers in one or more datacenter. If a datacenter or server becomes unavailable (unhealthy) the load balancer will route the traffic to only available datacenters with servers. <br/>
+  Running your workload across multiple **AZs** ensures that if 1 or 2 **AZs** become unavailable your service/applications remain available.
+
+### High Elasticity
+
+Your ability to automatically increase or decrease your capacity based on the current demand of traffic, memory and computing power
+<br/>
+
+**Horizontal Scaling:** <br/>
+
+1. Scaling Out - Add more servers of the same size
+2. Scaling In - Removing underutilised servers of the same size
+
+**Service usage:** <br/>
+
+- Auto Scaling Groups (ASG): is an AWS feature that will automatically add or remove severs based on scaling rules you define based on metrics <br/>
+
+Vertical Scaling is generally hard for traditional architecture so you'll usually only see horizontal scaling described with **Elasticity**
+
+### Highly Fault Tolerant
+
+Your ability for your service to ensure there is **no single point of failure**. Preventing the chance of failure
+<br/>
+
+**Fail-overs** is when you have a plan to **shift traffic** to a redundant system in case the primary system fails <br/>
+
+**Service usage:** <br/>
+
+- RDS Multi-AZ: is when you run a duplicate standby database in another AZ in case your primary database falls.
+
+A common example is having a copy (secondary) of your database where all ongoing changes are synced. The secondary system is not in-use until a **fail-over** occurs and it becomes the primary database.
