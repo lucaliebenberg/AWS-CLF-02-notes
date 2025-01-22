@@ -1,3 +1,7 @@
+# AWS CLF-02 exam notes
+
+![alt text](images/aws-logo.jpg 'AWS logo')
+
 ## Seven Advantages to Cloud
 
 - 1. Cost effective - Pay on demand
