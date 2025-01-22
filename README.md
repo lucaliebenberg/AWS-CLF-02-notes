@@ -316,3 +316,27 @@ Your ability for your service to ensure there is **no single point of failure**.
 - RDS Multi-AZ: is when you run a duplicate standby database in another AZ in case your primary database falls.
 
 A common example is having a copy (secondary) of your database where all ongoing changes are synced. The secondary system is not in-use until a **fail-over** occurs and it becomes the primary database.
+
+### Business Continuity Plan (BCP)
+
+A **business continuity plan** (BCP) is a document that outlines how a business will continue operating **during an unplanned disruption in services**
+
+- Recovery Point Objective (RTO)
+- Recovery Time Objective (RPO)
+
+### Disaster Recovery options
+
+![alt text](images/disaster_recovery.png 'Disaster Recovery Options diagram')
+
+### RTO
+
+![alt text](images/RTO.png 'RTO diagram')
+
+**Recovery Time Objective (RTO)** is the maximum delay between the interruption of service and restoration service. This object determines what is considered an acceptable time window when service is unavailable and is defined by the organisation.
+
+### RPO
+
+![alt text](images/RPO.png 'RPO diagram')
+
+- **Recovery Point Objective (RPO)** is the maximum acceptable amount of time since the last data recovery point.
+- This objective determines what is considered an aceptable loss of data between the last recovery point and the interruption of service and is defined by the organisation
