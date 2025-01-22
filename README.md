@@ -344,3 +344,27 @@ A **business continuity plan** (BCP) is a document that outlines how a business 
 
 - **Recovery Point Objective (RPO)** is the maximum acceptable amount of time since the last data recovery point.
 - This objective determines what is considered an aceptable loss of data between the last recovery point and the interruption of service and is defined by the organisation
+
+## Management and Developer Tools
+
+### AWS API ✅ <br/>
+
+(cover what API endpoints there are make requests too. Not commonly dealt with)
+
+### AWS Management Console
+
+- The AMS Management Console is a **web-based** unified console
+- **Build, manage, and monitor everything** from simple web apps to complex cloud deployments
+
+### AWS Account ID
+
+- Every AWS Account has a unique Account ID.
+- Account ID can be easily found vy dropping down the current user in global navigation
+  <br/>
+  The AWS Account ID is used:
+- When loggin in with a non-root user account
+- Cross-account roles
+- Support cases
+- Generally good practice to keep your Account ID private as it is one of many components used to identify an account for attack by a malicious actor
+
+## AWS Software Development Kit (SDK)
