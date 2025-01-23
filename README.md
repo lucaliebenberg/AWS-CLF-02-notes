@@ -367,4 +367,126 @@ A **business continuity plan** (BCP) is a document that outlines how a business 
 - Support cases
 - Generally good practice to keep your Account ID private as it is one of many components used to identify an account for attack by a malicious actor
 
-## AWS Software Development Kit (SDK)
+### AWS Resource Name (ARNs)
+
+- **Amazon Resource Names (ARN)** uniquely identify AWS resources. <br/>
+  The ARN have following formations:
+- `arn:partition:service:region:account-id:resource-id`
+- `arn:partition:service:region:account-id:resource-type/resource-id`
+- `arn:partition:service:region:account-id:resource-type:resource-id`
+
+Partition:
+
+- aws: AWS Regions
+- aws-cn: AWS Regions
+- aws-us-gov: AWS GovCloud (US) Regions
+
+Service - Identifies the service:
+
+- ec2
+- s3
+- iam
+
+Region - which AWS resource
+
+- us-east-1
+- ca-central-1
+
+Account ID
+
+- 121212121212
+- 123456789012
+
+Resource ID:
+
+- user/Bob
+- instance/i-1234567890abcdef0
+
+In the AWS Management Console its common to be able to copy the ARN to your clipboard
+<br/>
+
+```
+arn:aws:s3:::my-bucket
+```
+
+### Paths in ARNs
+
+- Resource ARNs can include a path
+- Paths can include a wildcard character, namely an asterisk(\*)
+
+**IAM Policy ARN Path**<br/>
+`arn:aws:iam::123456789012:user/Development/product_1234`
+
+<br/>
+
+**S3 ARN Path**<br/>
+`arn:aws:s3:::my_corporatae_bucket/Development`
+
+### AWS Command Line Interface (CLI)
+
+AWS Command Line (Interface) allows users to programatically interact with the AWS API via entering **single or multi-line commands** into a shell or terminal <br/>
+
+- The AWS CLI is a python executable program
+- Python is required to install AWS CLI
+
+### AWS SDK
+
+- A SDK is a **collection of software development tools** in one installable package
+- You can use **AWS SDK** to programatically create, modify, delete or interact with AWS resources
+
+### AWS CloudShell
+
+**AWS CloudShell** is a **browser-based** built into the AWS Management Console. (AWS CloudShell is scoped per region, Same crdential as logged in user. Free Service)
+<br/>
+
+**Preinstalled Tools**
+
+- AWS CLI, Python, Noe.js, git, make , pip, sudo, tar, tmux, vim + more
+  **Storage included**
+- 1GB of storage free per AWS Region
+  **Saved files and settings**
+- Files saved in your home directory are available in future sessions for the same AWS Region
+  **Shell Environments**
+- Bash, PowerShell, Zsh
+
+\*AWS CloudSherll is available in select regions
+
+### Infrastructure as Code (IAC)
+
+You write configuration script to **automate** creating, updating or destroyign cloud infrastructure
+
+- IaC is a blueprint fo your infrastructure
+- IaC allows you to easily **share, version or inventory** your Cloud Infrastructure
+
+**AWS CloudFormation (CFN)** - CFN is a Declarative IaC tool
+
+- What you see is what you get (explicit)
+- More verbose, but zero chance of mis-configuration
+- Uses scripting languages (JSON, YAML)
+
+**AWS Cloud Dvelopment Kit (CDK)** - CDN is an Imperative IaC tool
+
+- You say what you want, and the rest is filled (Implicit)
+- Les verbose, you could end up with mis-configuration
+- Uses scripting languages (JSON, YAML)
+- Does more than Declarative
+- Uses programming languages
+
+### Access Keys
+
+**Access Keys** is a _key secret_ required to have programmatic access to AWS resources when interaction with the AWS API outside of the AWS Management Console
+
+## Shared Responsibility Model
+
+The **Shared Responsibility Model** is a _cloud security framework_ that defines the security obligations of the customer versa the Cloud Service Provider (CSP - e.g: AWS)
+
+### AWS Shared Responsibility Model
+
+- Customers are responsible for Security **IN** the cloud
+- AWS is responsible for Security **OF** the cloud
+
+![alt text](images/srm 'AWS Shared Responsibility Model')
+
+### Types of Cloud Computing Responsibility
+
+![alt text](images/types-of-cc-responsibilities 'AWS Types of Shared Responsibility')
