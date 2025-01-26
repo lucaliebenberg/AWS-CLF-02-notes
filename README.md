@@ -485,19 +485,19 @@ The **Shared Responsibility Model** is a _cloud security framework_ that defines
 - Customers are responsible for Security **IN** the cloud
 - AWS is responsible for Security **OF** the cloud
 
-![alt text](images/srm 'AWS Shared Responsibility Model')
+![alt text](images/srm.jpg 'AWS Shared Responsibility Model')
 
 ### Types of Cloud Computing Responsibility
 
-![alt text](images/types-of-cc-responsibilities 'AWS Types of Shared Responsibility')
+![alt text](images/types-of-cc-responsibilities.jpg 'AWS Types of Shared Responsibility')
 
 ### Compute
 
-![alt text](images/srm-compute 'Shared Responsibility Model - Compute')
+![alt text](images/srm-compute.png 'Shared Responsibility Model - Compute')
 
 ### Compute - Diagram
 
-![alt text](images/srm-compute-diagram 'Shared Responsibility Model - Compute Diagram')
+![alt text](images/srm-compute-diagram.png 'Shared Responsibility Model - Compute Diagram')
 
 ### Shared Responsibility Model
 
@@ -511,4 +511,4 @@ The **Shared Responsibility Model** is a simple visualisation that helps determi
 - \*\*Responsibility of in the cloud: If you can configure or store it then you (the customer) are responsible for it.
 - \*\*Responsibility of the cloud: If you can not configure it then CSP is responsible for it.
 
-![alt text](images/srm 'Shared Responsibility Model Diagram')
+![alt text](images/srm.png 'Shared Responsibility Model Diagram')
