@@ -508,7 +508,9 @@ The **Shared Responsibility Model** is a simple visualisation that helps determi
 - The customer is responsible for the **configuration** of cloud services and granting access to users via permissions.
 - CSP is generally responsible for the underlying Infrastructure
   <br/>
-- \*\*Responsibility of in the cloud: If you can configure or store it then you (the customer) are responsible for it.
-- \*\*Responsibility of the cloud: If you can not configure it then CSP is responsible for it.
+- **Responsibility of in the cloud:** If you can configure or store it then you (the customer) are responsible for it.
+- **Responsibility of the cloud:** If you can not configure it then CSP is responsible for it.
 
 ![alt text](images/srm.png 'Shared Responsibility Model Diagram')
+
+## Computing Services
