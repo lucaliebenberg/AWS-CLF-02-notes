@@ -579,3 +579,31 @@ When you're able to run workloads on both your on-premise datacenter and AWS Vir
 ### Cost and Capacity Management Computing Services
 
 ![alt text](images/cost-capacity-management-computing-services.png 'Computing Services List Diagram')
+
+## Storage
+
+### Types of Storage
+
+![alt text](images/types-of-storage.png 'Types of Storage Diagram')
+
+<br/>
+
+### Introduction to S3
+
+![alt text](images/intro-to-S3.png 'Intro to S3 Diagram')
+
+<br/>
+
+### AWS Snow Family
+
+AWS Snow Family are **storage and compute devices used to physically move data in our out the cloud** when moving data over the internet or private connection - when it's to slow, difficult or costly
+
+![alt text](images/snow-family.png 'Snow Family Diagram')
+
+<br/>
+
+### AWS Storage Services
+
+![alt text](images/storage-services-1.png 'AWS Storage Services - 1')
+
+![alt text](images/storage-services-2.png 'AWS Storage Services - 2')
