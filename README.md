@@ -514,3 +514,68 @@ The **Shared Responsibility Model** is a simple visualisation that helps determi
 ![alt text](images/srm.png 'Shared Responsibility Model Diagram')
 
 ## Computing Services
+
+**Elastic Compute Cloud (EC2)** allows you to launch Virtual Machines (VM) <br/>
+What is a Virtual Machine?<br/>
+A Virtual Machine (VM) is an emulation of a physical computer using software. <br/>
+Server Virtualization allows you to easily: create, copy, resize or migrate your server. <br/>
+Multiple VMs can run **on the same physical server** so you can share the cost with other customers <br/>
+(Imagien if your server or computer was an executable file on your computer)
+<br/>
+EC2 is highly configurable server, where you can choose **AMI** that affects options such as:
+
+- The amount of CPUs
+- The amount of Memory (RAM)
+- The amount of Network Bandwidth
+- The OS
+- Attach multipl,e virtual hard-drives for storage (eg - Elastic Book Store)
+
+(**An Amazon Machine Image** is a predefined configuration for a Virtual Machine)
+<br/>
+EC2 is considered **the backbone of AWS** because the majority of AWS services are using EC2 as their underlying servers (eg - S3, RDS, DynamoDB, Lambdas)
+
+<br/>
+
+**Computing Services Diagram**
+<br/>
+
+![alt text](images/computing-services.png 'Computing Services List Diagram')
+
+### High Performance Computing Services
+
+**The Nitro System** - A combination of **dedicated hardware and lightweight hypervisor** enabling faster innovation and enhanced security. All new EC2 instances use Nitro System. <br/>
+
+- Nitro Cards: specialised cards for VPC, EBS and Instance Storage and controller card
+- Nitro Security Chips: integrated into mothetrboard. Protects hardware resources
+- Nitro Hypervisor: lightweight hypervisor Memory and CPU allocation Bare Metal-like performance
+  <br/>
+
+**Bare Metal Instance**: you can launch EC2 instance that have no hypervisor so you can run workloads directly on the hardware for maximum performance and control. The **M5 and R5** EC2 instances run bare metal. <br/>
+
+**Bottlerocket**: is a Linux-based open-source operation system that is purpose-built by AWS for running containers on Virtual Machines or bare metal hosts.<br/>
+
+**What is High Performance Computing (HPC)?**: a cluster of hundreds of thousands of servers with fast connections between each of them with the purpose of boosting computing capacity. <br/>
+
+**AWS ParallelCluster**: is an AWS-supported open soruce cluster management tool that makes it easy for you to deploy and manage High Performance Computing (HPC) clusters on AWS <br/>
+
+### Edge and Hybrid Computing Services
+
+**What is Edge Computing?** <br/>
+When you push your computing workloads outside of your networks to run close to the destination location. (eg - Pushing computing to run on phones, IoT Devices, or external servers not within your cloud network)
+<br/>
+
+**What is Hybrid Computing?** <br/>
+When you're able to run workloads on both your on-premise datacenter and AWS Virtual Private Cloud (VPC)
+<br/>
+
+**AWS Outposts** is a <strong>physical rack of servers</strong> that you can put in your datacenter. AWS Outposts allows you to use AWS API and Services such as EC2 right in your datacenter.<br/>
+
+**AWS Wavelength** allows you <strong>to build and launch your applications in a telecom datacenter</strong>. By doing this your apps wit have ultra-low latency since they will be pushed over a 5G Network and be closest as possible to the end user.<br/>
+
+**VMWare Cloud on AWS** allows you to <strong>manage on-premise virtual machines using VMWare</strong> as EC2 instances. The data-center must be using VMWare for Virtualisation.<br/>
+
+**AWS Local Zones** are <strong>edge datacenters located outside of an AWS region</strong> so you can use AWS closer to end destination.<br/>
+
+### Cost and Capacity Management Computing Services
+
+![alt text](images/cost-capacity-management-computing-services.png 'Computing Services List Diagram')
