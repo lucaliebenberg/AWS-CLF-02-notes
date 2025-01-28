@@ -627,3 +627,34 @@ AWS Snow Family are **storage and compute devices used to physically move data i
 <br/>
 
 Normally a database infers someone is using a **relational row-oriented data store**
+
+### Data Warehouse
+
+A relational datastore designed for **analytical workloads**, which is generally **column-oriengted data-store**
+<br/>
+
+- Companies will have _terabytes and millions of rows of data_, and they need a fast way to be able to produce analytics reports.
+  <br/>
+
+Data warehouses generally perform **aggregation**:
+
+- Data warehouses are optimised around columns since they need to quickly aggregate column data
+  <br/>
+  Data warehouses are generally designed to be HOT:
+- Hot means they can return queries very fast even though they have vasts amount of data
+  <br/>
+  Data warehouses are infrequently accessed meaning they aren't intented for real-time reporting but maybe once or twice a day or once a week to generate business and user reports
+  <br/>
+  A data warehouse needs to consume data from a relational database on a regular basis
+
+### NoSQL Database Services
+
+![alt text](images/nosql-db-services.png 'NoSQL Database Services')
+
+### Relational Databse Services
+
+![alt text](images/relational-db-services.png 'Relational Database Services')
+
+### Other Database Services
+
+![alt text](images/other-db-services.png 'Other Database Services')
