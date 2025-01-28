@@ -607,3 +607,23 @@ AWS Snow Family are **storage and compute devices used to physically move data i
 ![alt text](images/storage-services-1.png 'AWS Storage Services - 1')
 
 ![alt text](images/storage-services-2.png 'AWS Storage Services - 2')
+
+## Databases
+
+- A database is a **data-store that stores semi-structure and structured data** <br/>
+- A database is more **complex data stores** because it <strong>requires using formal design and modeling techniques</strong> <br/>
+  Database can be generally categorised as either:
+  _Relational Databases_:
+- Structured data that stronly represents tabular data (tables, rows & columns)
+  _Non-Relational Databases_:
+- Semi-structuted that may or may not distantly tabular data
+  <br/>
+  Databases have a rich set of functionality:
+
+1. Specialised language to query (retrieve data)
+2. Specialised modelling strategies to optimise retrieval for different use cases
+3. More fine tune control over the transformation of the data into useful data structures or reports
+
+<br/>
+
+Normally a database infers someone is using a **relational row-oriented data store**
