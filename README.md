@@ -704,3 +704,11 @@ Data warehouses generally perform **aggregation**:
 - eg: <strong>You cannot block a single IP address</strong>
 
 ![alt text](images/security-groups-nacls.png 'Security Groups vs NACLs')
+
+## EC2
+
+- **Elastic Compute Cloud (EC2)** is a _highly configurable virtual server/machine_.
+- EC2 is resizable **compute capacity**. It takes minutes to launch new instances.
+- Anything and everything on AWS uses EC2 instances underneath.
+
+![alt text](images/ec2.png 'Introduction to EC2')
