@@ -668,3 +668,39 @@ Data warehouses generally perform **aggregation**:
 ### Enterpirse/Hybrid Networking Services
 
 ![alt text](images/enterprise-networking-services.png 'Enterpirse/Hybrid Networking Services')
+
+### Virtual Private Cloud (VPC) and Subnets
+
+**Virtual Private Cloud (VPC)** is a logically isolated section of the AWS Network, where you launch your AWS resources. You choose a _range of IPs using CIDR Range_.
+<br/>
+
+**CIDR Range**: A "CIDR range" in the cloud refers to a block of IP addresses defined using Classless Inter-Domain Routing (CIDR) notation
+<br/>
+
+- **Subnets** are a logical partition of an IP network into multiple smaller network segments. _You are breaking up your IP range for VPC_ into smaller networks. <br/>
+- Subnets _need to have a smaller CIDR range than the VPC_ that represent their portion (eg - Subnet CIDR Range 10.0.0.0/24 = 256 IP Addresses)
+  <br/>
+
+- **A Public Subnet** is one that can reach the internet
+- **A Private Subnet** is one that cannot reach the internet
+
+![alt text](images/vpc-subnets.png 'Virtual Private Cloud (VPC) and Subnets')
+
+### Security Groups vs NACLs
+
+**Network Access Control Lists (NACLs)**:
+
+- Acts as a virtual _firewall at the subnet level_
+- You create _Allow and Deny rules_
+- eg: Block a specific IP address known for abuse
+
+<br/>
+
+**Security Groups**:
+
+- Acts as a virtual _firewall at the instance level_
+- Implicitly denies all traffic. _You create only Allow rules_
+- eg: Allow an EC2 instance access on port 22 for SSH
+- eg: <strong>You cannot block a single IP address</strong>
+
+![alt text](images/security-groups-nacls.png 'Security Groups vs NACLs')
