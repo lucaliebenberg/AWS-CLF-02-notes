@@ -712,3 +712,69 @@ Data warehouses generally perform **aggregation**:
 - Anything and everything on AWS uses EC2 instances underneath.
 
 ![alt text](images/ec2.png 'Introduction to EC2')
+
+### EC2 Families
+
+**What are Instance Families?**
+
+- Instance families are different combinations of CPU, Memory, Storage and Networking capacity
+- Instance families allow you to choose the appropriate combination of capacity to meet your application's unique requirements
+- Different instance families are different because of the varying hardware used to give them their unique properties
+- Commonly instance families are called _Instance Types_ but an instance type is a combination of size and family
+
+![alt text](images/ec2-instance-families.png 'EC2 Instance Families')
+
+### EC2 Instance Types
+
+An instance type is a particular _instance size and instance family_
+<br/>
+
+A common pattern for instance sizes:
+
+- nano
+- micro
+- small
+- medium
+- large
+- xlarge
+- 2xlarge
+- 4xlarge
+- 8xlarge
+- ...
+  <br/>
+
+There are many exceptions to this pattern for sizes:
+
+- c6g.metal: is a bare metal machine
+- C5.9xlarge: is not a power of 2 or even number size
+
+### EC2 Instance Sizes
+
+EC2 Instance Sizes **generally double** in price and key attributes
+
+### EC2 - Dedicated Host
+
+**Dedicated Hosts** are single-tenant EC2 instances designed to let you Bring-Your-Own-License (BOYL) based on _machine characteristics_
+
+![alt text](images/ec2-dedicated-host.png 'EC2 - Dedicated Host')
+
+### EC2 Tenancy
+
+EC2 has 3 levels of tenancy
+
+- _Dedicated Host:_ your server lives here and you have control of the physical attributes
+- _Dedicated Instance:_ your server always lives here
+- _Default:_ your instance lives here until reboot
+
+![alt text](images/ec2-tenancy.png 'EC2 Tenancy')
+
+### EC2 Pricing Models
+
+There are 5 different ways to pay for EC2 (Virtual Machines)
+
+1. On-Demand (Least Commitment)
+2. Spot (Biggest Savings)
+3. Reserved (Best Long-term)
+4. Dedicated (Most Expensive)
+
+_AWS Savings Plan_ is another way to save but can be used for more than just EC2
