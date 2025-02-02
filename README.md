@@ -778,3 +778,161 @@ There are 5 different ways to pay for EC2 (Virtual Machines)
 4. Dedicated (Most Expensive)
 
 _AWS Savings Plan_ is another way to save but can be used for more than just EC2
+
+### **On-Demand**
+
+**On-Demand** is a _Pay-As-You-Go (PAYG) model_, where you consume compute and then you pay
+
+- When you launch an EC2 instance, it is _by default_ using _On-Demand_ pricing
+- On-Demand has _no up-front payment_ and _no long-term commitment_
+- You are charged by the _second (min of 60 seconds)_ of the _hour_
+- When looking up pricing it will always show EC2 pricing is the _hourly rate_
+
+<br/>
+
+- **On-Demand** is for applications where the workload is for _short-term_, _spikey_ or _unpredictable_
+- When you have a _new app_ for development or you want to run experiment
+
+### **Reserved Instances (RI)**
+
+Designed for applications that have a _steady-state, predictable usage_, or require _reserved capacity_ <br/>
+Reduced Pricing is based on _Term_ x _Class Offering_ x _RI Attributes_ x _Payment Option_ <br/>
+
+#### Term - The longer the term the greater savings
+
+- You commit to a _1 year_ or _3 year_ contract
+- When it expires, your instance will use On-Demand with no interruption to service
+
+#### Class - The less flexible the greater savings
+
+- _Standard_: up to _75%_ reduced pricing compared to On-Demand. You can modify _RI Attributes_
+- _Covertible_: up to _54%_ reduced pricing compared to On-Demand. You can exchange RI based on _RI Attributes_ if greater or equal in value
+  <br/>
+  AWS no longer offers Scheduled RI57
+
+#### Payment Options - The greater upfront the greater the savings
+
+- _All Upfront_: full payment is made at the start of the term
+- _Partial Upfront_: a portion of the cost must be paid upfront and the remaining hours in the term are billed at a discounted hourly rate
+- _No Upfronot_: you are billed a disocunted hourly rate for every hour within the term, regardless of whether the Reserved Instance is being used
+  <br/>
+
+- _RIs_ can be _shared between multiple accounts within an AWS Organisation_
+- _Unused RIs_ can be sold in the _Reserved Instance Marketplace_
+
+![alt text](images/purchase-RI.png 'Purchase an RI')
+
+### **Reserved Instances (RI) - RI Attributes**
+
+**RI Attributes (aka Instance Attributes)** are limited based on Class Offering, and can affect the final price of an RI instance.
+<br/>
+
+There are 4 RI Attributes:
+
+1. _Instance Type_: for example, m4.large. This is composed of the instance family (for example, m4) and the instance size (for example, large)
+   <br/>
+
+2. _Region_: the region in which the Reserved Instance is purchased
+   <br/>
+
+3. _Tenancy_: whether your instance runs on shared (default) or single-tenant (dedicated) hardware
+   <br/>
+
+4. _Platform_: the operating system (for example, Windows or Linux/Unix)
+
+### **Regional and Zonal RI**
+
+When you purchase a RI, you determine the _scope_ of the Reserved Instance <br/>
+(The scope **does not affect the price**)
+<br/>
+
+#### _Regional RI_ - purchase for a Region
+
+- does not reserve capacity
+- RI discount applies to instance usage in any AZ in the Region
+- RI discount applies to instance usage within the instance family, regardless of size. Only supported on Amazon Linux/Unix Reserved Instances with default tenancy
+- You can queue purchases for Regional RI
+
+#### _Zonal RI_ - purchase for an AZ
+
+- reserves capacity in the specified AZ
+- RI discount applies to instance in the selected AZ (No AZ flexibility)
+- No instance size flexibility. RI discounts applies to instance usage for the specified instance type and size only
+- You can't queue purchases for Zonal RI
+
+### **Reserved Instances (RI) - RI Limits**
+
+There is a limit to the number of Reserved Instances that you can purchase per month
+<br/>
+
+_Per month_ you can purchase:
+
+- _20_ Regional RIs <i>per Region</i>
+- _20_ Zonal RIs <i>per AZ</i>
+
+<br/>
+
+**Regional Limits**
+
+- You cannot exceed your running On-Demand Instance limit by purchasing Regional RIs. The default On-Demand Instance limit is 20
+- Before purchasing RI ensure your On-Demand limit is equal to or greater than your RI you intend to purchase
+  <br/>
+
+**Zonal Limits**
+
+- You can exceed your running On-Demand Instance limit by purchasing Zonal RIs
+- If you already haev 20 running On-Demand Instances and you purchase 20 Zonal RIs, you can launch a further 20 On-Demand Instances that match the specifcations of your Zonal RIs
+
+### Capacity Reservations
+
+EC2 instances are backed by different kinds of hardware, and so there is a _finite amount of servers_ available within an AZ per instance type or family
+<br/>
+
+**Capacity Reservation** is a service of EC2 that allows you to _request a reserve of EC2 instance type_ for a specific Region and AZ
+<br/>
+
+- The reserved capacity is charged at the selected instance type's On-Demand rate whether an instance is running in it or not
+- You can also use your Regional RIs with your Capacity Reservatioons to benefit from billing discounts
+
+### Standard vs Convertible RI
+
+There are some key differences between _Standard_ and _Convertible_
+
+![alt text](images/std-vs-convertible.png 'Standard vs Convertible RI')
+
+### RI Marketplace
+
+EC2 Reserved Instance Marketplace allows you to _sell your unused Standard RI_ to recoup your RI spend for RI you do not intend or cannot use
+<br/>
+
+- Reserved Instances can be sold after they have been active for at least 30 days and once AWS has received the upfront payment (if applicable).
+- You must have a US bank account to sell Reserved Instances on the Reserved Instance Marketplace.
+- There must be at least one month remaining in the term of the Reserved Instance you are listing.
+- You will retain the pricing and capacity benefit of your reservation until it's sold and the transaction is complete.
+- Your company name (and address upon request) will be shared with the buyer for tax purposes.
+- A seller can set only the upfront price for a Reserved Instance. The usage price and other configuration (e.g.,
+  instance type, Availability Zone, platform) will remain the same as when the Reserved Instance was initially purchased.
+- The term length will be rounded down to the nearest month. For example, a reservation with 9 months and 15 days remaining will appear as 9 months on the Reserved Instance Marketplace.
+- You can sell up to $20,000 in Reserved Instances per year. If you need to sell more Reserved Instances.
+- Reserved Instances in the GovCloud region cannot be sold on the Reserved Instance Marketplace.
+
+### Spot Instances
+
+AWS has _unused compute capacity_ that they want to maximise the utility of their idle servers
+<br/>
+(It's like when a hotel offers booking discounts to fill vacant suites or planes offer discounts to fill vacant seats)
+<br/>
+
+- Spot Instances provide a discount of _90%_ compared to On-Demand Pricing
+- Spot Instances can be terminated if the computing capacity is needed by other On-Demand customers
+- Designed for applications that have flexible start and end times or applications that are only feasible st _very low_ compute costs
+  <br/>
+
+**AWS Batch** is an easy and convenient way to use Spot Pricing
+<br/>
+
+**Termination Conditions**<br/>
+
+- Instances can be terminated by AWS _at anytime_
+- If your instance is _terminated by AWS_, **YOU DO NOT GET CHARGED** for a partial hour of usage
+- If _you terminate_ an instance **YOU WILL STILL BE CHARGED** for any hour that it ran
