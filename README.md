@@ -936,3 +936,65 @@ AWS has _unused compute capacity_ that they want to maximise the utility of thei
 - Instances can be terminated by AWS _at anytime_
 - If your instance is _terminated by AWS_, **YOU DO NOT GET CHARGED** for a partial hour of usage
 - If _you terminate_ an instance **YOU WILL STILL BE CHARGED** for any hour that it ran
+
+### Dedicated Instances
+
+Dedicated Instances is designed to meet regulatory requirements
+<br/>
+
+- When you have strict _server-bound licensing_ that won't support multi-tenancy or cloud deployments you use **Dedicated Hosts**.
+
+Types: <br/>
+_Multi-tenant:_
+
+- when customers are running workloads on the same hardware
+- _virtual isolation_ is what separate customers
+  _Single-tenant:_
+- when a single customer has dedicated hardware
+- _physical isolation_ is what separates customers
+  <br/>
+  Dedicated can be offered for: <br/>
+
+* On-demand
+* Reserved (up to 60% savings)
+* Spot (up to 90% savings)
+  <br/>
+
+You choose tenancy when you _launch_ your EC2
+<br/>
+
+_Enterprises_ and _Large Organisations_ may have security concerns or obligations about sharing the same hardware with other AWS Customers
+
+### AWS Savings Plan
+
+_Savings Plan_ offers you the similar discounts as Reserved Instances (RIs) but _simplifies the purchasing process_ <br/>
+
+There are 3 types of Savings Plans:
+
+- Compute Savings Plans
+- EC2 Instance Savings Plans
+- SageMaker Savings Plans
+  <br/>
+  You can choose 2 different terms:
+- 1 year
+- 3 year
+  <br/>
+  You can choose the following Payment Options
+- All Upfront
+- Partial Upfront
+- No Upfront
+  (You can choose an hourly commitment)
+  <br/>
+
+AWS Savings Plan has 3 different savings types:
+_Compute_
+
+- Compute Savings Plans provide the most flexibility and help to reduce your costs by up to 66%
+- These plans automatically apply to EC2 instance usage, AWS Fargate, and AWS Lambda service usage regardless of instance family size, AZ, region, OS or tenancy
+  _EC2 Instances_
+- Provied the lowest prices, offering savings up to 72% in exchange for commitment to usage of indiidual instance families in a region
+- Auto reduces your cost on the selected instance family in that region regardless of AZ size, OS or tenancy
+- Give you the flexibility to change your usage between instances within a family in that region
+  _SageMaker_
+- Helps you reduce SageMaker costs by up to 64%
+- Auto apply to SageMaker usagr regardless of instance familu, size, component, or AWS region
