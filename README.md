@@ -998,3 +998,142 @@ _Compute_
   _SageMaker_
 - Helps you reduce SageMaker costs by up to 64%
 - Auto apply to SageMaker usagr regardless of instance familu, size, component, or AWS region
+
+## Zero Trust Model
+
+The model operates on the principle of _"trust no one, verify everything"_
+<br/>
+
+Malicious actors being able to by-pass conventional _acess controls_ demonstrates traditional security measures are no longer sufficient
+<br/>
+
+In the Zero Trust Model _Identity_ becomes the primary security perimeter <br/>
+
+**What is the Primary Security Perimeter?** <br/>
+
+- The primary or new security perimeter defines the first line of defense and its security controls that protect a company's cloud resources and assets
+  <br/>
+
+**Network-Centric (Old Way):**
+
+- Traditional security focused on firewalls and VPNs since there were few employees or workstations outside the office or they were in specific remote offices
+  <br/>
+
+**Identity-Centric (New Way):**
+
+- Bring-your-own-device, remote workstations is much more common
+- Cannot trust if the employee is in a secure location (identity based security controls like MFA, or providing provisional access based on the level of risk from where, when and what a user wants to access)
+  <br/>
+
+<blockquote>Identity-Centric does not replace but *augments* Network-Centric security</blockquote>
+
+### Zero Trust om AWS
+
+**Identity Security Controls** you can implement on AWS to meet the Zero Trust Model <br/>
+**AWS Identity and Access Management (IAM)**
+
+- IAM Policies
+- Permission Boundaries
+- Service Control Policies (Organisation-wide Policies)
+- IAM Policy Conditions
+  - aws:SourceIp -> restrict on IP Address
+  - aws:RequestedRegion -> restrict on region
+  - aws:MultiFactorAuthPresent -> restrict if MFA is turned off
+  - aws:CurrentTime -> restrict access based on time of day
+  <br/>
+  <blockquote>AWS does not have ready-to-use identity controls that are intelligent, which is why AWS is considered to not have a true Zero Trust offering for customers, and 3rd-party services need to be used</blockquote>
+  <br/>
+  A collection of AWS Services can be setup to intelligent-ish detection of identity concerns but requires expert knowledge
+  1. **AWS CloudTrail**: tracks all API calls
+  2. **AWS GuardDuty**: detects suspicious or malicious activity based on CloudTrail and other logs
+  3. **AWS Detective**: used to analyse, investigate and quickly identify security issues (can ingest findings from Guard Duty)
+
+### Zero Trust on AWS with 3rd Parties
+
+AWS does technically implement a Zero Trust Model but does not allow for intelligent identity security controls <br/>
+_Third Party Identity solutions:_
+
+- Azure Active Directory (Azure AD)
+- Google BeyondCorp
+- JumpCloud
+  (all have more intelligent security controls for real-time detection)
+
+### Directory Service
+
+**What is directory service?** <br/>
+A service that maps the _name of network resources to their network addresses_
+<br/>
+
+- A directory service is shared information infrastructure for _location, managing, administrating and organising_ resources
+- Is a critical component of a network operating system
+- A directory server (name server) is a server which provides a directory service
+- Each resource on the network is considered an object by the directory server.
+- Information about a particular resource is stored as a collection of attributes associated with that resource or object
+
+### Active Directory
+
+To give organisations the ability to manage multiple on-premises inftrastructure components and systems using a single identity per user
+
+![alt text](images/active-directory.png 'Active Directory')
+
+### Identity Providers (IdPs)
+
+- A system that creates, maintains and manages identity information for principals and provides authentication services to applications withiin a _federation_ or distributed network
+- A trusted provider of your user identity that lets you use authetentication to access other services
+
+<blockquote>
+
+_Federated identity_ is a method of linking a user's identity across multiple separate identity management systems
+
+</blockquote>
+
+(examples - OpenID, OAuth2.0, SAML: _Single-Sign-On via web browser_)
+
+### Single-Sign-On
+
+**Single-sign-on** is an authentication scheme that _allows a user to log in wih a single ID and password to different systems and software_
+<br/>
+
+<blockquote>
+
+SSO allows IT departments to adminstrate a single identity that can access many machines and cloud services
+
+</blockquote>
+
+_Login for SSO is seamless, where once a user is logged into their primarry directory, as soon as they utilise this software they are not presented with a login screen_
+
+### Lightweight Directory Access Protocol (LDAP)
+
+An open, vendor-neutral, industry standard _application protocol for accessing and maintaining distributed directory information services_ over an Internet Protocol (IP) network
+<br/>
+
+- A common use of LDAP is to provide a central place to store usernames and passwords
+- LDAP enables for _same sign-in_. Same sign-on allows users to use a single ID and password, but they have to enter it in everytime they want to login
+
+**Why use LDAP when SSO is more convenient?** <br/>
+
+- Most SSO systems are using LDAP
+- LDAP was not designed natively to work with web applications
+- Some systems only support integration with LDAP and not SSO
+
+![alt text](images/LDAP.png 'LDAP Architecture')
+
+### Security Keys
+
+**What is a Security Key?** <br/>
+A secondary device used as a second step in the authentication process to gain access to a device workstation or application (example - Yubikey)
+
+### AWS Identity and Access Management (IAM)
+
+AWS Identity and Access Management (IAM) you can create and manage AWS users and groups, and use permissions to allow and deny their access to AWS resources <br/>
+
+_IAM Policies_: JSON documents which grant permissions for a specific user, group, or role to access services. Policies are attached to **IAM Identities** <br/>
+_IAM Permission_: The API actions that can or cannot be performed. They are represented in the IAM Policy document
+
+<hr/>
+
+#### IAM Identities
+
+_IAM Users_: End users who log into the console or interact with AWS resources programatically or via clicking UI interfaces <br/>
+_IAM Groups_: Group up your users so they all share permission levels of the group (Admins, Developers, etc.) <br/>
+_IAM Roles_: Roles grant AWS resources permissions to specific AWS API actions. Associate policies to a role and then assign it to an AWS resource
