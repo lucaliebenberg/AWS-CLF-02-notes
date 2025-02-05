@@ -1294,3 +1294,24 @@ _Receives events_ from a source and _routes events_ to a target based on <strong
 ### Application Integration Services
 
 ![alt text](images/application-integration-services.png 'Application Integration Services')
+
+## Containers
+
+### VMs vs Containers
+
+**VMs:**
+
+- VMs _do not_ make best use of space
+- Apps are not isolated, which could cause _config conflicts, security problems or resource hogging_
+  <br/>
+
+**Containers:**
+
+- Containers allow you to run multiple apps which are virtually isolated from each other
+- Launch new containers and configure OS Depdencies per container
+
+![alt text](images/vm-vs-container.png 'VMs vs Containers')
+
+### Container Services
+
+![alt text](images/container-services.png 'Container services')
