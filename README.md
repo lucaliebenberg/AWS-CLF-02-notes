@@ -1136,4 +1136,36 @@ _IAM Permission_: The API actions that can or cannot be performed. They are repr
 
 _IAM Users_: End users who log into the console or interact with AWS resources programatically or via clicking UI interfaces <br/>
 _IAM Groups_: Group up your users so they all share permission levels of the group (Admins, Developers, etc.) <br/>
-_IAM Roles_: Roles grant AWS resources permissions to specific AWS API actions. Associate policies to a role and then assign it to an AWS resource
+_IAM Roles_: Roles grant AWS resources permissions to specific AWS API actions. Associate policies to a role and then assign it to an AWS resource <br/>
+
+#### Principle of Least Privilege (PoLP)
+
+**Principle of Least Privilege (PoLP)** is the computer security concept of providing a user, role, or application the least amount of permissions to perform a operation or action <br/>
+_Just-Enough-Access:_
+
+- Permitting only the exact actions for the identity to perform a task
+  <br/>
+
+_Just-In-Time:_
+
+- Permitting the smallest length of duration an identity can use permissions
+  <br/>
+
+_Risk-based adaptive policies:_
+
+- Each attempt to access a resource generates a risk score of how likely the request is to be from a compromised source
+- The risk score could be based on many factors (eg - device, user location, IP address, what service is being accessed and when)
+
+### AWS Account Root User
+
+Administrative Tasks _that only the Root User can perform:_
+
+- Change your account settings
+- Close your AWS account
+- Change or Cancel AWS Support Plan
+
+### AWS Single-Sign On
+
+**AWS Single-Sign On (AWS SSO)** is where you create, or connect, your workforce identities in AWS _once_ and manage access centrally across your AWS organisation
+
+![alt text](images/aws-sso.png 'AWS SSO')
