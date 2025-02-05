@@ -1169,3 +1169,128 @@ Administrative Tasks _that only the Root User can perform:_
 **AWS Single-Sign On (AWS SSO)** is where you create, or connect, your workforce identities in AWS _once_ and manage access centrally across your AWS organisation
 
 ![alt text](images/aws-sso.png 'AWS SSO')
+
+## Application Integration
+
+**What is Application Integreation?** <br/>
+Application Integration is the process of letting two independent applications communicate and work with each other, commonly facilitated by an intermediate system
+<br/>
+
+<blockquote>
+
+Cloud workloads encourage systems and services to be loosely coupled and so AWS has many service for the specific purpose of application integration
+
+</blockquote>
+<br/>
+
+Common systems or design patterns utilised for Application Integration generally are:
+
+- Queueing
+- Streaming
+- Pub/Sub
+- API Gateways
+- State Machine
+- Event Bus
+
+### Queueing
+
+**What is a Messaging System?** <br/>
+
+- Used to provide async communication and decouple processes via messages / events
+- From a sender and receiver ( producer and consumer)
+  <br/>
+
+**What is a Queueing System?** <br/>
+
+- A messgaing system that generally will delete messages once they are consumed
+- Simple communication. _Not Real-time_
+- Have to pull. _Not reactive_
+  <br/>
+
+**Simple Queueing Serviec (QSS)**: fully managed _queueing service_ that enables you to decouple and scale microservices, distributed systems, and serverless applications
+<br/>
+
+Use Cases:
+
+- You need to queue up transaction emails to be sent (eg - SignUp, Reset Password)
+
+### Streaming
+
+**What is streaming?** <br/>
+
+- Multiple consumers can _react_ to events (messages)
+- Events live in the stream for long periods of time, so complex operations can be applied
+- **Real-time**
+  <br/>
+
+**Amazon Kinesis:** is the fully managed solution for collection, processing, and analysing streaming data in the cloud
+
+![alt text](images/aws-kinesis.png 'AWS Kinesis - Streaming')
+
+### Pub/Sub
+
+**What is Pub/Sub?** <br/>
+
+- Publish-subscribe pattern commonly implemented in _messaging systems_
+- In a pub/sub system, the sender of messages (_publishers_) do not send their messages directly to receivers
+- They send their messages to an _event bus_. The event bus categorises their messages into groups
+- The receivers of messages (_subscribers_) subcribe to these groups
+- Whenever new messages appear within their subscription the messages are immediately delivered to them
+
+![alt text](images/pub-sub.png 'Pub/Sub')
+<br/>
+
+- Publishers have no knowledge of who their subscribers are
+- Subscribers do _not pull_ for messages
+- Messages are instead automatically and immediately _pushed_ to subscribers
+- Messages and events are interchangeable terms in pub/sub
+
+Use Case:
+
+- a real-time chat system
+- web-hook system
+
+**Simple Notificaton Service (SNS):** is a highly available, secure, fully managed _pub/sub messaging_ service that enables you to _decouple_ microservices, distributed systems, and serverless applications
+
+### API Gateway and Amazon API Gateway
+
+**What is an API Gateway?** <br/>
+
+- A program that sits between a single-entry point and multiple backends
+- Allows for throttling, logging, routing logic or formatting of the request and repsonse
+  <br/>
+
+**Amazon API Gateway:** is a solution for _creating secure APIs_ in your cloud environment at _any scale_. Create APIs that act as a front door for applications to access data, business logic, or functionality from back-end services
+
+![alt text](images/aws-api-gateway.png 'Amazon API Gateway')
+
+### State Machines and AWS Step Functions
+
+**What is a State Machine?** <br/>
+An abstract model which decides how one state moves to another based on a series of conditions. _Think of a state machine like a flow chart_
+<br/>
+
+_What is AWS Step Functions?_ <br/>
+
+- Coordinate multiple AWS Services into a serverless workflow
+- A graphical console to visualise the components of your application as a series of steps
+- Automatically triggers and tracks each step, and retries when there are errors, so your application executes in order as expected, every time
+- Logs the state of each step, so when things go wrong, you can diagnose and debug problems quickly
+
+### Event Bus and Amazon Event Bridge
+
+**What is an Event Bus?** <br/>
+_Receives events_ from a source and _routes events_ to a target based on <strong>rules</strong>
+
+![alt text](images/event-bus.png 'Event Bus')
+<br/>
+
+**EventBridge** is a _serverless_ event bus service that is used for application integration by _streaming real-time_ data to your applications (formeerly called Amazon CloudWatch Events)
+<br/>
+
+![alt text](images/amazon-event-bridge.png 'Amazon Event Bridge')
+<br/>
+
+### Application Integration Services
+
+![alt text](images/application-integration-services.png 'Application Integration Services')
