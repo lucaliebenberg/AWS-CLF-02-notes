@@ -1519,3 +1519,38 @@ _Pay-for-Value_ (you don't pay for idle servers)
 </blockquote>
 
 <br/> (Some services are more serverless than others)
+
+## Windows on AWS
+
+AWS has multiple cloud services and tools that make it easy for you to run Windows workloads on AWS
+<br/>
+
+- **Windows Servers on EC2**
+- **SQL Server on RDS**
+- **AWS Directory Service**
+- **AWS License Manager**
+- **Amazon FSx for Windows File Server**
+- **Amazon WorkSpaces**
+- **AWS Lambda**
+- **AWS Migration Accelaration Program (MAP)**
+
+## AWS License Manager
+
+**What is Bring-Your-Own-License? (BYOL)** <br/>
+
+- The process of reusing an existing software license to run vendor software on a cloud vendor's computing service
+- BYOL allows companies to save money since they may have purchased the license in bulk or at a time that provided a greater discount then if purchased again
+  <br/>
+
+**AWS License Managewr** is a service that makes it easier for you to manage your software licenses from software vendors centrally across AWS and your on-premises environments <br/>
+AWS License Manager is software that is licensed based on \*virtual cores (vCPUs, physical cores, sockets, or number of machines) <br/>
+AWS License Manager works with:
+
+- EC2 - Dedicated Instances, Dedicated Hosts, Spot Instances
+- RDS - (Only for Oracle databases)
+
+<blockquote>
+
+For _Microsoft Windows Server_ and _Microsoft SQL Server License_ you generally need to use **Dedicated Host**
+
+</blockquote>
