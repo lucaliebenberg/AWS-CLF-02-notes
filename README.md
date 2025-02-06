@@ -1467,3 +1467,16 @@ Resource Groups appears in the _Global Console Header_ and under _Systems Manage
 **AWS Copilot:** CLI that enables customers to quickly launch and easily manage containerised apps on AWS<br/>
 **AWS CodeStar:** Provides a unified UI, enabling you to easily manage your software development activities in one place<br/>
 **AWS CDK:** An Iac (Infra as code) tool. Allows you to use your fav programming language. Generates out CloudFormation templates as the means for IaC<br/>
+
+### AWS Elastic Beanstalk
+
+Elastic Beanstalk is powered by a CloudFormation template setup for you:
+
+- Elastic Load Balancer
+- Autoscaling Groups
+- RDS Database
+- EC2 Instance preconfigued (or custom) platforms
+- Monitoring (CloudWatch, SNS)
+- In-Place and Blue/Green deployment methodologies
+- Security (Rotates passwords)
+- Can run _Dockerised_ environments
