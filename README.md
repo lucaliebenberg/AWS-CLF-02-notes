@@ -1315,3 +1315,116 @@ _Receives events_ from a source and _routes events_ to a target based on <strong
 ### Container Services
 
 ![alt text](images/container-services.png 'Container services')
+
+## Governance
+
+### Organisations and Accounts
+
+**AWS Organisations** allow the creation of new AWS acounts. Centrally manage billing, control access, compliance, security, and share resources across your AWS accounts
+<br/>
+
+**Root Account User:** is a single sign-in identity that has complete access to all AWS services and resources in an account. Each account has a Root Account User
+<br/>
+
+**Organisaton Units:** are a group of AWS accounts within an organisation which can also contain other organisational units - creating a hierarchy
+<br/>
+
+**Service Control Policies:** give central control over the allowed permissions for all accounts in your organisation, helping to ensure your accounts stay within your organisation's guidelines
+<br/>
+
+- AWS Organisations must be turned on, and once turned on it cannot be turned off
+- You can create as many AWS Accounts as you like, one account will be the Master/Root Account
+
+<blockquote>
+
+_AWS Account_ is not the same as _User Acount_
+
+</blockquote>
+
+![alt text](images/aws-orgs.png 'AWS Organisations')
+
+### AWS Control Tower
+
+- Helps _Enterprises_ quickly set-up a secure, _AWS multi-account_
+- Provides you with a _baseline environment_ to get started with a _multi-account architecture_
+  <br/>
+
+**Landing Zone**
+A landing zone is a baseline environment following well-architected and best practices to start launching production ready workloads
+
+- AWS SSO enabled, Centralised logging for AWS CloudTrail, cross-account security auditing
+  <br/>
+
+**AWS Factory**
+
+- Automates provisioning of new accounts in your organisation
+- Standardise the provisioning of new accounts with pre-approved network configuration and region selections
+  <br/>
+
+**Guardrails**
+
+- Pre-packaged governance rules for security, operations, and compliance that customers can select and apply enterprise-wide or to specific groups of accounts
+
+<blockquote>
+
+_AWS Control Tower_ is the replacement for retired _AWS Landing Zones_
+
+</blockquote>
+
+### AWS Config
+
+_AWS Config_ is a Compliance-as-Code framework that allows us to manage change in your AWS accounts on a _per region bases_ <br/>
+
+**When should you use AWS Config?** <br/>
+
+- I want this _resource_ to stay _configured_ a _specific way_ for compliance
+- I want to _keep track_ of configuration _changes_ to resources
+- I want _a list of all resources_ within a region
+- I want to _analyse potential security_ weaknesses, you need detailed historical information
+
+**What is Change management?** <br/>
+Change management in the context of Cloud Infrastructure is when we have _formal process_ to:
+
+- Monitor changes
+- Enforce changes
+- Remediate changes
+
+![alt text](images/aws-config.png 'AWS Config')
+
+### AWS Quick Starts
+
+_AWS Quick Starts_ are _Prebuilt templates_ by AWS and AWS partners to _help deploy wide range of stacks_
+
+<blockquote>
+
+Reduce hundreads of manual procedures into just a few steps
+
+</blockquote>
+<br/>
+
+A Quick Start is composed of 3 parts:
+
+1. A reference architecture for the deployment
+2. AWS CloudFormation templates that automate and configure the deployment
+3. A deployment guide explaining the architecture and implementation in detail
+
+### Tagging
+
+_A tag_ is a _key and value pair_ that you can assign to AWS resources
+<br/>
+
+Tags allow you to organise your resources such as:
+<br/>
+
+_Resource management_
+_Cost management and optimisation_
+
+- Specific workloads, environmnets (eg - Developer Environments)
+- Cost tracking, Budgets, Alerts
+  _Operations management_
+- Business commitments and SLA operations (eg - Mission Critical Services)
+  _Security_
+- Classification of data and security impact
+  _Governance and regulatory compliance_
+  _Automation_
+  _Workload optimisation_
