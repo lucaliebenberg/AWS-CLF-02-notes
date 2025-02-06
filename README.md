@@ -1428,3 +1428,42 @@ _Cost management and optimisation_
   _Governance and regulatory compliance_
   _Automation_
   _Workload optimisation_
+
+### Resource Groups
+
+_Resource Groups_ are a collection of resources that share one or more tags
+<br/>
+
+Helps your organise and consolidate information based on your project and the resources that you use <br/>
+Resouces Groups can display details about a group of resource based on:
+
+- Metrics
+- Alarms
+- Configuration Settings
+  <br/>
+
+At any time you can modify the settings of your resource groups to change what resources appear <br/>
+Resource Groups appears in the _Global Console Header_ and under _Systems Manager_
+
+### Business Centric Services
+
+![alt text](images/business-centric.png 'Business Centric Services')
+
+## Provisioning
+
+**What is provisioning?** <br/>
+
+- The allocation or creation of resources and services to a customer
+- AWS Provisioning Services are responsible for setting up and then managing those AWS Services
+  <br/>
+
+**Elastic Beanstalk:** Platform as a Service (PaaS) to easily deploy web-applications
+**AWS OpsWorks:** Configuration management service <br/>
+**CloudFormation:** Infrastructure modeling and provisioning service <br/>
+**AWS QuickStarts:** Pre-made packages that can laucnh and configure your AWS compute, network, storage and other services required to deploy a workload on AWS <br/>
+**AWS Marketplace:** digital catalogue of thousands of sofware listings from independent software vendors you can use to find, buy, test and deploy software <br/>
+**AWS Amplify:** Mobile and web-application framwork for severless computing <br/>
+**AWS App Runner:** Fully managed service that makes it easy for devs to quickly deploy containerised web apps and APIs, at scale and with no prior infra experience required<br/>
+**AWS Copilot:** CLI that enables customers to quickly launch and easily manage containerised apps on AWS<br/>
+**AWS CodeStar:** Provides a unified UI, enabling you to easily manage your software development activities in one place<br/>
+**AWS CDK:** An Iac (Infra as code) tool. Allows you to use your fav programming language. Generates out CloudFormation templates as the means for IaC<br/>
