@@ -1554,3 +1554,7 @@ AWS License Manager works with:
 For _Microsoft Windows Server_ and _Microsoft SQL Server License_ you generally need to use **Dedicated Host**
 
 </blockquote>
+
+## Logging
+
+### Logging Services
