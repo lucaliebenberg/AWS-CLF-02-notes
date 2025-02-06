@@ -1480,3 +1480,42 @@ Elastic Beanstalk is powered by a CloudFormation template setup for you:
 - In-Place and Blue/Green deployment methodologies
 - Security (Rotates passwords)
 - Can run _Dockerised_ environments
+
+## Serverless
+
+**Serverless Services** <br/>
+
+- When the underlying servers, infrastructure and Operating System is taken care of by the Cloud Service Provider (CSP).
+- Servless is generally by default highly available, scalable and cost-effective. You pay for what you use
+  <br/>
+
+**DyanmoDB:** NOSQL key/value and document database
+**Simple Storage Service (S3):** Serverless object storage service
+**ECS Fargate:** Serverless orchestration container service
+**AWS Lambda:** Serverless functions service
+**Step Functions:** State machine service
+**Auora Servlerss:** Serverless on-demand versions or Aurora
+
+### What is Serverless?
+
+- Servless architecture generally describes fully managed cloud-services
+- The classification of a cloud service being serverless is not a Boolean answer
+  <br/>
+
+A serverless service could have all or most of the following characteristics:
+
+- Highly elastic and scalable
+- Highly available
+- Highly Durable
+- Secure by default
+- Abstracts away the underlying infrastructure and are billed based on the execution of your business task
+- Serverless can _Scale-to-Zero_ meaning when not in use the serverless resources cost nothing
+  <br/>
+
+<blockquote>
+
+_Pay-for-Value_ (you don't pay for idle servers)
+
+</blockquote>
+
+<br/> (Some services are more serverless than others)
