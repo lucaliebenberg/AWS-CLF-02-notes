@@ -1558,3 +1558,116 @@ For _Microsoft Windows Server_ and _Microsoft SQL Server License_ you generally 
 ## Logging
 
 ### Logging Services
+
+**CloudTrail** - logs all API calls (SDK, CLI) between AWS services (who can we blame) <br/>
+
+- Detect developer misconfiguration
+- Detect malicious actors
+- Automate responses
+  <br/>
+
+**CloudWatch** is a collection of multiple services
+
+- CloudWatch _Logs_ - A centralised place to store your cloud services log data or application logs
+- CloudWatch _Metrics_ - Represents a time-ordered set of data points. A variable to monitor
+- CloudWatch _Events (EventBridge)_ - Trigger an event based on a condition (eg - Every hour take snapshot of server)
+- CloudWatch _Alarms_ - Triggers notifications based on metrics
+- CloudWatch _Dashboard_ - Create visualisations based on metrics
+  <br/>
+
+**\*AWS X-Ray**
+
+- Is a \*distributed tracing system
+- You can use it pinpoint issues with your microservices
+- See how data moves from one app to another, how long it took to move, and if it failed to move forward
+
+### AWS CloudTrail
+
+**AWS CloudTrail** is a service that enables governance, compliance, operational auditing, and risk auditing of your AWS account <br/>
+
+- AWS CloudTrail is used to monitor API calls and Actions made on an AWS account
+- Easily identify which users and accounts made the call to AWS
+  (
+
+  - **Where** - Source IP Address
+  - **When** - EventTime
+  - **Who** - User, UserAgent
+  - **What** - Region, Resource, Action
+    )
+    <br/>
+
+- CloudTrail is already logging by default and will collect logs for _last 90 days_ via **Event History**
+- If you need more than 90 days you need to create a **Trail**
+  <br/>
+
+- Trails are output to S3 and do not have GUI like Event History
+- To analuyse a Trail you'd have to use **Amazon Athena**
+
+### CloudWatch Alarm
+
+**A CloudWatch Alarm** monitors a _CloudWatch Metric_ based on _a defined threshold_ <br/>
+
+When alarm breaches (goes outside the defined threshold) then it changes _state_ <br/>
+_Metric Alarm States:_
+
+- **OK**
+
+* The metric expression is _within_ the defined threshold
+
+- **ALARM**
+
+* The metric expression is _outside_ of the defined threshold
+
+- **INSUFFICIENT_DATA**
+
+* The alarm _just started_
+* The metric is _not available_
+* _Not enough data_ is available
+  <br/>
+  When it changes state we can define what _action it should trigger:_
+
+- Notification
+- Auto Scaling Group
+- ECC2 Action
+
+### Anatomy of an Alarm
+
+Anatomy diagram of an Alarm
+
+![alt text](images/alarm-anatomy.png 'Anatomy of an Alarm')
+
+### CloudWatch Logs - Log Streams
+
+**Log Streams** <br/>
+A log stream represents a _sequnce of events_ from a _application or instance being monitored_
+
+![alt text](images/log-streams.png 'CloudWatch Logs - Log Streams')
+
+**Log Events** <br/>
+Represents a single event in a log file. Log events can be seen within a Log Stream
+
+![alt text](images/log-events.png 'CloudWatch Logs - Log Events')
+
+### CloudWatch Logs - Log Insights
+
+**CloudWatch Logs Insights** enables you to _interactively search and analyse your CloudWatch log data_ and has the following advantages:
+
+- More robust filtering than using the simple Filter events in a Log Stream
+- Less burdensome than having to export logs to S3 and analyse them via Athena
+  <br/>
+
+* **CloudWatch Logs Insights** supports all types of logs
+* CloudWatch Logs Insights is commonly used viathe console to ad-hoc queries against log groups
+* CloudWatch Insights has its own language called: _CloudWatch Logs Insights Query Syntax_
+  <br/>
+
+- A single request can query up to _20 log groups_
+- Queries _time out after 15 minutes_, if they have not completed
+- Query results are _available for 7 days_
+
+### CloudWatch Metrics
+
+- _A CloudWatch Metric_ represents a _time-ordered set of data points_
+- Its a _variable_ that is _monitored over time_
+  <br/>
+  CloudWatch comes with many _predefined_ metrics that are generally name spaced by AWS Service
