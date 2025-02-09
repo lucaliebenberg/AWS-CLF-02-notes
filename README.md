@@ -1783,3 +1783,43 @@ There is another popular instruction set called _ARM_ which uses fewer instructi
 - Tailored for training deep learning models
 - Often viewed as a competitor to NVIDIA's GPUs
 - Offers a specialised alternative that's optimised specifically for AI training
+
+## AWS Well-Architected Framework
+
+### General Definitions
+
+(Business Value) <br/>
+
+- **Operational Excellent Pillar** - Run and monitor systems
+- **Security Pillar** - Protect data and systems, mitigate risk
+- **Reliability Pillar** - Mitigate and recover from disruptions
+- **Performance Efficiency Pillar** - Use computing resources effectively
+- **Cost Optimisation Pillar** - Get the lowest price
+  <br/>
+
+_Component_ - Code, Configuration and AWS Resource against a requirement <br/>
+_Workload_ - A set of components that work together to deliver business value <br/>
+_Milestones_ - Key changes of your architecture through product life cycle <br/>
+_Architecture_ - _How_ components work together _in a_ workload <br/>
+_Technology Portfolio_ - A collection of workloads required for the business to operate <br/>
+
+### On Architecture
+
+- AWS Well-Architected Framework is designed around a different kind of team structure
+- AWS has distributed kind of team structure
+- Distributed teams can come with new risks, AWS mitigates these with Practices, Mechanisms and Leadership Principles
+
+![alt text](images/on-architecture.png 'AWS On Architecture')
+
+### Amazon Leadership Principles
+
+The _Amazon Leadership Principles_ are **a set of principles** used during the company **decision-making, problem solving, simple brainstorming and hiring** <br/>
+
+### AWS Well-Architected - Anatomy of a Pillar
+
+A Pillar of the Well-Architected Framework is _structured_ as follows:
+
+- Design Principles: A list of design principles that need to be considered during implementation
+- Definition: Overview of the best practice categories
+- Best Practices: Detailed information about each best practice with AWS Services
+- Resources: Additional documentation, whitepapers and videos to implement this pillar
