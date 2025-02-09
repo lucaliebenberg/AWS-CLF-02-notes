@@ -4,13 +4,13 @@
 
 ## Seven Advantages to Cloud
 
-- 1. Cost effective - Pay on demand
-- 2. Global - Launch anywhere in the world
-- 3. Secure - Cloud servvices can be secure by default
-- 4. Reliable - Data backup, disaster recovery, data replication, fault tolerance
-- 5. Scalable - Increae or decrease resources and services based on demand
-- 6. Elastic - Automate scaling during spikes and drop in demand
-- 7. Current - The underlying hardware and managed software is patched, upgraded and replaced by the cloud provider without interruption to you
+1. Cost effective - Pay on demand
+2. Global - Launch anywhere in the world
+3. Secure - Cloud servvices can be secure by default
+4. Reliable - Data backup, disaster recovery, data replication, fault tolerance
+5. Scalable - Increase or decrease resources and services based on demand
+6. Elastic - Automate scaling during spikes and drop in demand
+7. Current - The underlying hardware and managed software is patched, upgraded and replaced by the cloud provider without interruption to you
 
 ## AWS Global Infrastructure
 
@@ -1671,3 +1671,115 @@ Represents a single event in a log file. Log events can be seen within a Log Str
 - Its a _variable_ that is _monitored over time_
   <br/>
   CloudWatch comes with many _predefined_ metrics that are generally name spaced by AWS Service
+
+## ML, AI and Big Data
+
+### Introduction to ML and AI
+
+![alt text](images/intro-ml-ai.png 'Introduction to ML and AI')
+
+_Amazon SageMaker_ is a fully managed service to _build, train, and deploy machine learning models_ at scale
+
+- _Apache MXNet on AWS_: open source deep learning framework
+- _TensorFlow on AWS_: open source machine intelligence framework
+- _PyTorch on AWS_: open source machine learning framework
+  <br/>
+
+_Amazon SageMaker Ground Truth_ is a _data-labeling service_.<br/>
+_Amazon Augmented AI_ is a _human-intervention review service_. <br/>
+
+### Machine Learning and AI Services
+
+_Amazon CodeGuru_: machine learning code analysis service <br/>
+_Amazon Lex_: conversion interface service <br/>
+_Amazon Personalise_: real-time recommendations <br/>
+_Amazon Polly_: text-to-speech <br/>
+_Amazon Rekognition_: image and video recognition service <br/>
+_Amazon Transcribe_: speech-to-text service <br/>
+_Amazon Textract_: OCR (extract text from scanned documents) service <br/>
+_Amazon Translate_: neural machine leanring translation service <br/>
+_Amazon Comprehend_: natural language processor (NLP) service <br/>
+_Amazon Forecast_: time-series forecasting service <br/>
+_Amazon Deep Learning AMIs_: pre-installed with popular deep learning frameworks <br/>
+_Amazon Forecast_: docker image instances pre-installed with deep learning frameworks and interfaces <br/>
+_Amazon DeepComposer_: machine learning enabled musical keyboard <br/>
+_Amazon DeepLens_: video-camera that uses deep learning <br/>
+_Amazon DeepRacer_: toy race car, autonomous driving <br/>
+_Amazon Elastic Interface_: allows you to attacth low-cost GPU-powered acceleration to EC2 instances to reduce the cost of running deep learning interference by up to 75% <br/>
+_Amazon Fraud Detector_: fully managed fraud detection as a service <br/>
+_Amazon Kendra_: enterprise machine learning search engine service <br/>
+_Amazon Bedrock_: large language model (LLM) cloud service offer to gen text and image (eg - chatGPT) <br/>
+_Amazon CodeWhisper_: an AI code generator that will predict code to your use case <br/>
+_Amazon DevOps Guru_: uses ML to analyse your op data and application metrics and events to detect op abnormalities <br/>
+_Amazon Lookout_: for Equipment / Metric / Vison. Uses ML models for quality control and performed automated inspections <br/>
+_Amazon Monitron_: uses ML models to predict unplanned equipment downtime. Monitor has an IOT sensor that captures vibrations and sensor data <br/>
+_Amazon Neuron_: an SDK used to run deep learning workloads on AWS Inferentia and AWS Trainium based instance <br/>
+
+### Big Data and Analytics Services
+
+**What is Big Data?** <br/>
+A term used to describe _massive volumes of structured/unstructured data_ that is so large it is difficult to _move and process_ using traditional dataabse and software techniques <br/>
+
+_Amazon Athena_: serverless interactive query service <br/>
+_Amazon CloudSearch_: full-text search service <br/>
+_Amazon Elastic Service (ES)_: managed ElasticSearch cluster <br/>
+_Amazon Elastic MapReduce (EMR)_: for data processing and analysis <br/>
+_Kinesis Data Streams_: real-time streaming data service <br/>
+_Kinesis Firehose_: serverless and simpleer version of Data Streams <br/>
+_Amazon Kinesis Data Analytics_: allows you to run queries against data that is flowing through your real-time stream so you can create reports and analysis on emerging data <br/>
+_Amazon Kinesis Video Streams_: allows you to analyse or apply processing on real-time streaming video <br/>
+_Managed Kafa Service (MSK)_: fully managed Apache Kafka service <br/>
+_Redshift_: is a petabyte data-warehouse <br/>
+_Amazon QuickSight_: is a business intelligence (BI) dashboard <br/>
+_AWS Data Pipeline_: automates the movement of data <br/>
+_AWS Glue_: extract, transform, load (ETL) service <br/>
+_AWS Lake Formation_: centralised, curated, and secured repository that stores all your data <br/>
+_AWS Data Exchange_: a catalogue of third-party datasets <br/>
+
+### Amazon QuickSight
+
+**Amazon QuickSight** is a _Business Intelligence (BI) Dashboard_ that allows you to ingest data from various AWS storage or database services to _quickly visualise business data_ with minimal programming or data formula knowledge
+
+<blockquote>
+
+QuickSight uses _SPICE_ (super-fast, parallel, in-memory, calculation engine) to achieve blazing fast performance at scale
+
+</blockquote>
+
+- _Amazon QuickSight ML Insights_: Detect Anomalies, Perform accurate forecasting, Generate Natural Language Narratives
+- _Amazon QuickSight Q_: Ask question using natural language, on all your data, and receive answers in seconds
+
+![alt text](images/amazon-quicksight.png 'Amazon QuickSight')
+
+### ML and DL Frameworks and Tools
+
+**Apache MXNet**: adopted by AWS, supports both imperative and symbolic <br/>
+**PyTorch**: optimised tensor library for deep learning using GPUs and CPU (created by Facebook) <br/>
+**TensorFlow**: low-level machine learning framework (created by Google) <br/>
+**Apache Spark**: unified analytics engine for large-scale data processing <br/>
+**Chainer**: powerful, flexible and intuitive deep learning framework, supports CUDA <br/>
+**Hugging Face**: an AI community of ML models and dataset <br/>
+
+### What is Intel
+
+- Intel is a multionational corporation and is one of the world's largest semiconductor chip manufacturers.
+- Intel is the inventor of the _x86 instruction set_
+
+<blockquote>
+
+There is another popular instruction set called _ARM_ which uses fewer instructions and usually results in better power efficiency which results in lower costs
+
+</blockquote>
+
+### Intel Xeon Scalable & Intel Gaudi
+
+**Intel Xeon Scalable Processor** <br/>
+
+- The Intel Xeon Scalable Processor is a high performant CPU designed for enterprise and server applications, commonly used in AWS instances
+
+**Intel Habana Gaudi** <br/>
+
+- AI training processor developed by Habana Labs, a company acquired by Intel
+- Tailored for training deep learning models
+- Often viewed as a competitor to NVIDIA's GPUs
+- Offers a specialised alternative that's optimised specifically for AI training
