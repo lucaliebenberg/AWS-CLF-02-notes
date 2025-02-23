@@ -1823,3 +1823,88 @@ A Pillar of the Well-Architected Framework is _structured_ as follows:
 - Definition: Overview of the best practice categories
 - Best Practices: Detailed information about each best practice with AWS Services
 - Resources: Additional documentation, whitepapers and videos to implement this pillar
+
+#### Design Principles
+
+##### Operational Excellence Design Principles
+
+**Perform operations as code** <br/>
+
+Apply the same engineering discipline you would like to application code to your cloud infrastructure <br/>
+
+**Make frequent, small, reversible changes** <br/>
+Design workloads to allow components to be updated regularly <br/>
+
+**Refine operations procedures frequently** <br/>
+Look for continuous opportunities to improve your operations <br/>
+
+**Anticipate failiure** <br/>
+Perform post-mortems on system failures to better improve, write test code, kill production servers to test recovery <br/>
+
+**Learn from all operational failures** <br/>
+Share lessons learned in a knowledge base for operational events and failures across your entire organisation <br/>
+
+##### Security Design Principles
+
+**Implement a strong identity foundation** <br/>
+Implement Principle of Least Privilege (PoLP). <br/>
+Use Centralised identity. <br/>
+Avoid Long-Lived credentals. <br/>
+
+**Enable traceability** <br/>
+Monitor alert and audit actions and changes to your environment in real-time <br/>
+Integrate log and metric collection and automate investigation and remediation <br/>
+
+**Apply security at all layers** <br/>
+Take Defense in Depth approach with multiple security controls for everything (eg - Network, VPC, Load Balancing Instances, OS, Application Code)
+
+**Automate security best practices** <br/>
+
+**Protect data in transit and at rest** <br/>
+
+**Keep people away from data** <br/>
+
+**Prepare for security events** <br/>
+Incident management systems and investigation policy and processes. <br/>
+Tools to detect, invetiagte and recover from incidences. <br/>
+
+##### Reliability Design Principles
+
+**Automatically recover from failure** <br/>
+Monitor Key Performance Indicators (KPIs) and trigger automation when threshold is breached <br/>
+
+**Test recovery procedures** <br/>
+Test how your workload fails, and you validate your recvoery procedures <br/>
+You can use automation to simulate different failures or to recreate scenarios that led to failures before <br/>
+
+**Scale horizontally to increase aggregate system availability** <br/>
+Replace one large resource with multiple small resources to reduce the impact of a single failure on the overall workload <br/>
+Distribute requests across multiple, smaller resources to ensure that they don't share a common point of failure. <br/>
+
+**Stop guessing capacity** <br/>
+In On-Premise it takes a lot of guess work to determine the elasticity of your workload demands <br/>
+With Cloud you don't need to guess how much you need because you can request the right-size of resoruces on-demand <br/>
+
+**Manage changes in automation** <br/>
+Making changes via Infrastructure as Code, will allow for a formal process to track and review infrastructure
+
+##### Performance Efficiency Design Principles
+
+**Democratise advanced technologies** <br/>
+**Go global in 5 minutes** <br/>
+**Use serverless architecture** <br/>
+**Experiment more often** <br/>
+**Consider mechanical sympathy** <br/>
+
+##### Cost Optimisation Design Principles
+
+**Implement Cloud Financial Management** <br/>
+**Adopt a consumption model** <br/>
+**Measure overall efficiency** <br/>
+**Stop spending money on undifferentiated heavy lifting** <br/>
+**Analyse and attribute expenditure** <br/>
+
+#### AWS Well-Architected Tool
+
+The Well-Architected Tool is _an auditing tool_ to be used to asses your cloud workloads for alignment with the AWS Well Architected Framework <br/>
+(Its essentially a _checklist_, with nearby references to help you assemble a report to share with executives and key stake-holders)
