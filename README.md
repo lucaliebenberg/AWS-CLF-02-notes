@@ -1996,3 +1996,27 @@ At the highest level, the AWS CAF organise guidance into _six focus areas_: <br/
 4. _Platform Perspective_
 5. _Security Perspective_
 6. _Operations Perspective_
+
+## Billing, Pricing and Support
+
+### AWS Support Plans
+
+![alt text](images/aws-support-diagram.png 'AWS Support Plans diagram')
+
+![alt text](images/aws-support-illustration.png 'AWS Support Plans Pricing illustration')
+
+### Technical Account Manager (TAM)
+
+A _Technical Account Manager_ provides both **proactive guidance and reactive support** to help you succeed with your AWS journey <br/>
+
+(TAMs follow the Amazon Leadership Principles, especially about being Customer obsessed) <br/>
+
+![alt text](images/tam-diagram.png 'Technical Account Manager (TAM) diagram')
+
+<blockquote>
+
+TAMs are only available at the Enterprise Support tier
+
+</blockquote>
+
+### AWS Marketplace
