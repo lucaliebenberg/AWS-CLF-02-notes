@@ -1908,3 +1908,9 @@ Making changes via Infrastructure as Code, will allow for a formal process to tr
 
 The Well-Architected Tool is _an auditing tool_ to be used to asses your cloud workloads for alignment with the AWS Well Architected Framework <br/>
 (Its essentially a _checklist_, with nearby references to help you assemble a report to share with executives and key stake-holders)
+
+#### AWS Architecture Center
+
+The AWS Architecture Center is a web-portal that contains _best practices_ and _reference architectures_ for a variety of different workloads <br/>
+
+## TCO and Migration
