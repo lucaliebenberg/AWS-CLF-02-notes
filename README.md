@@ -2020,3 +2020,50 @@ TAMs are only available at the Enterprise Support tier
 </blockquote>
 
 ### AWS Marketplace
+
+- **AWS Marketplace** is a curated digital catalogue with _thousands_ of software listings from independent software vendors
+- Easily find, buy, test and deploy software that already runs on AWS
+- The product can be _free_ to use or can have an _associated charge_. The charge becomes part of your AWS bill, and once you pay, AWS Marketplace pays the provider
+- The sales channel for ISVs and Consulting Partner allows you to _sell your solutions_ to other AWS customers
+
+![alt text](images/aws-marketplace.png 'AWS Marketplace diagram')
+
+### Consolidated Billing
+
+- A feature of AWS Organisations that allows you to pay for multiple AWS accounts with _one bill_
+- You can designate one _master account that pays the charges_ of all the other _member accounts_
+- Use **Cost Explorer** to visualise usage for consolidated billing
+- You can combine the usage across all accounts in the organisation to share the volume pricing discounts
+
+![alt text](images/aws-consolidated-billing.png 'AWS Consolidated Billing diagram')
+
+### Consolidated Billing Volume Discounts
+
+- AWS has **Volume Discounts** for many services
+- The more you usem the more you save
+- Consolidated Billing lets you take advantage of Volume Discounts
+- Consolidated Billing is a feature of AWS Organisations
+
+### AWS Trusted Advisor
+
+**AWS Trusted Advisor** is a _recommendation tool_ which automatically and actively monitors your AWS account to provide **actional recommendations** across a series of categories
+
+<blockquote>
+
+Think of AWS Trusted Advisor like an automated checklist of best practices on AWS
+
+</blockquote>
+
+**Cost Optimisation** <br/>
+
+- Idle Load Balancers
+- Unassociated Elastic IP Addresses
+
+**Performance** <br/>
+
+- High Utilisation Amazon EC2 Instances
+
+**Security** <br/>
+
+- MFA on Root Account
+- IAM Access Key Rotation
