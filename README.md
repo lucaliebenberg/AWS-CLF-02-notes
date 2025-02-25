@@ -1914,3 +1914,85 @@ The Well-Architected Tool is _an auditing tool_ to be used to asses your cloud w
 The AWS Architecture Center is a web-portal that contains _best practices_ and _reference architectures_ for a variety of different workloads <br/>
 
 ## TCO and Migration
+
+### Total Cost and Ownership (TCO)
+
+**What is the Total Cost of Ownership? (TCO)** <br/>
+
+- TCO is a _financial estimate_ intended to help buyers and owners determine the direct and indirect costs of a product or service
+- Creating a TCO report is useful when your company _is looking to migrate from on-premise to cloud_
+
+![alt text](images/tco.png 'Total Cost and Ownership (TCO)')
+
+### CAPEX vs OPEX
+
+**Capital Expenditure (CAPEX)** <br/>
+
+- _Spending money upfront_ on physical infrastructure
+- Deducting that expense from your tax bill over time
+
+<blockquote>
+
+With Capital Expenses _you have to guess upfront_ what you plan to spend
+
+</blockquote>
+
+**Operational Expenditure (OPEX)** <br/>
+
+- The costs associated with an on-premises datacenter that has shifted the cost to the service provider
+- The customer only has to be concerned with _non-physical costs_
+
+<blockquote>
+
+With Operation Expenses you can try a product or service _without investing in equipment_
+
+</blockquote>
+
+### AWS Pricing Calculator
+
+The _AWS Pricing Calculator_ is a _free cost estimate tool_ that can be used within your _web browser_ without the need for an AWS Account to estimate the cost of various AWS services <br/>
+
+- The AWS Pricing Calcultor contains 100+ services that you can configure for cost estimate
+- To calculate TCO an organisation needs to compare their existing cost against the AWS costs and so the AWS Pricing Calculator can be used to determne that cost
+
+### Migration Evaluator
+
+_AWS Migration Evaluator_ is an _estimate tool_ used to determine an organisation existing on-premise cost so it can compare it against AWS costs for planned cloud migration <br/>
+
+- Migration Evaluator uses an _Agentless Collector_ to collect data from your on-premise infrastructure to extract your on-premise costs
+
+![alt text](images/migration-evaluator.png 'Migration Evaluator')
+
+### EC2 VM Import / Export
+
+VM Import/Export allows users _to import Virtual Machine images into EC2_ <br/>
+
+- Prepare your Virtual Image for upload
+- Upload your Virtual Image to S3
+- Use the AWS CLI to import your image - It will generate an Amazon Machine Image (AMI)
+
+### Database Migration Service (DMS)
+
+- **AWS Database Migration Service (DMS)** allows you to quickly and securely migrate one database to another
+- DMS can be used to migrate your on-premise database to AWS
+
+<blockquote>
+
+**AWS Schema Conversion Tool** is used in many cases to automatically convert a source database schema to a target database schema
+
+</blockquote>
+
+![alt text](images/dms-diagram.png 'Database Migration Service (DMS) diagram')
+
+### AWS Cloud Adoption Framework (CAF)
+
+The AWS Cloud Adoption Framework is a whitepaper to help you plan your migration from on-premise to AWS <br/>
+
+At the highest level, the AWS CAF organise guidance into _six focus areas_: <br/>
+
+1. _Business Perspective_
+2. _People Perspective_
+3. _Governance Perspective_
+4. _Platform Perspective_
+5. _Security Perspective_
+6. _Operations Perspective_
