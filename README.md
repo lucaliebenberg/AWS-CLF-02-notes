@@ -2067,3 +2067,58 @@ Think of AWS Trusted Advisor like an automated checklist of best practices on AW
 
 - MFA on Root Account
 - IAM Access Key Rotation
+
+**Fault Tolerance** <br/>
+
+- Amazon RDS Backups
+
+**Service Limits** <br/>
+
+- VPC
+
+### Service Level Agreements
+
+**What is a Service Level Agreement (SLA)?** <br/>
+A _formal commitment_; expective level of service (example - Financial or Service Credits)
+
+**What is a Service Level Indicator (SLC)?** <br/>
+A _metric/measurement_
+
+**What is a Service Level Objective (SLO)?** <br/>
+A _target percentage_
+
+### AWS Service Level Agreements
+
+- _DynamoDB SLA_
+- _Compute SLAs_
+- _RDS SLA_
+
+### Service Health Dashboard
+
+The **Service Health Dashboard** shows the general status of AWS services
+
+### AWS Personal Health Dashboard
+
+![alt text](images/personal-health-dashboard.png 'AWS Personal Health Dashboard')
+
+- Provides _alerts and guidance_ for AWS events that might affect your environment
+- All customers can access the Personal Health Dashboard
+- Shows recent events to help you manage active events, and shows proactive notifications so that you can plan for scheduled activities
+- Use these alerts to get notified about changes that can affect your AWS resources, and then follow the guidance to diagnose and resolve issues
+
+### AWS Abuse
+
+**AWS Trust & Safety** is a team that specifically deals with abuses ocurring on the AWS platform for the following issues:
+
+- Spam
+- Port scanning
+- Denial-of-service (DoS) attacks
+- Intrusion attempts
+- Hosting prohibited content
+- Distributing malware
+
+<blockquote>
+
+AWS Support does not deal with Abuse tickets. You need to contact **abuse@amazonaws.com** or fill out the Report Amazon AWS abuse form
+
+</blockquote>
